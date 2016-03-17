@@ -1,0 +1,30 @@
+/**********************
+ 	MEDIA
+**********************/
+
+@media (min-width: 0px) and (max-width: 1200px) {
+	.social {
+		visibility: hidden;
+	}
+}
+
+/* Smaller Devices */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	body {
+		
+	}
+}
+
+/* Ipads & Tablets */
+
+@media (min-width: 768px) {
+	
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		display: none;
+	}
+}
+

@@ -1,0 +1,120 @@
+/*******************
+	HEADER
+*******************/
+
+.header {
+	height: 50px;
+	padding: 3px 1px 3px 14px;
+	background-color: #FFF;
+}
+
+.logo {
+	float: left;
+	margin: 3px;
+}
+
+.header-form {
+	
+}
+
+.search-icon {
+	background-image: url("../images/gandalf.jpg");
+	background-size: 100% 100%;
+	left: 0;
+}
+
+.search {
+	background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+	background-position: cover;
+	float: left;
+	margin: 10px 6px;
+	width: 275px;
+	font-size: 100%;
+}
+
+.header-right {
+	float: right;
+	width: 129px;
+}
+
+.logged-in-dropdown {
+	float: left;
+	line-height: 2.3em;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #999;
+}
+
+.logged-in-dropdown:hover {
+	color: #de5338;
+	cursor: pointer;
+}
+
+.dropdown-content {
+
+}
+
+.plus {
+	float: left;
+	line-height: 1.7em;
+	color: #999;
+	font-size: 28px;
+	padding: 0 8px;
+}
+
+.plus:hover {
+	color: #de5338;
+	cursor: pointer;
+}
+
+.bell {
+	background-image: url("../images/bell.png");
+	background-size: 100% 100%;
+	height: 14px;
+	width: 14px;
+	float: left;
+	margin: 13px 0;
+}
+
+.bell:hover {
+	background-image: url("../images/redbell.png");
+	cursor: pointer;
+}
+
+.profile-pic {
+	border-radius: 100%;
+	height: 32px;
+	width: 32px;
+	float: right;
+	background-color: green;
+	margin: 5px 20px 0 0;
+}
+
+.login {
+	float: right;
+	text-transform: uppercase;
+	color: #999;
+	margin: 16px 20px 10px 0;
+	font-size: 11px;
+	font-weight: bold;	
+}
+
+.login:hover {
+	color: #de5338;
+}
+
+.logged-out-dropdown {
+	margin-left: 44px;
+	float: left;
+	line-height: 2.3em;
+	letter-spacing: 1.2px;
+	font-weight: bold;
+	color: #999;
+}
+
+.logged-out-dropdown:hover {
+	color: #de5338;
+	cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Hunt</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class = "header group">
+	
+		
+			<%= link_to image_tag('logo.png', class: "logo" ), root_path %>
+		
+		<form action = "" class = "header-form">
+			<label for "search" ><i class = "search-icon"></i></label>
+			<input class = "search" type = "search" placeholder = "Discover your next favourite thing..." >
+		</form>
+		
+		
+		<div class = "header-right" >
+		
+			<div class = "logged-out-dropdown">...
+				<div class = "dropdown-content">
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+					<a href = ""></a>
+				</div>
+			</div>
+						
+			<a href = "" class = "login">Login</a>
+ 			
+ 			
+		</div>
+		
+	</header>
+
+
+<%= yield %>
+
+</body>
+</html>

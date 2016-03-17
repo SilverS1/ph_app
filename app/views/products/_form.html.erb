@@ -1,0 +1,29 @@
+<div class = "row">
+	<div class = "col-md-6 col-md-offset-3">
+		<%= form_for(@product) do |f| %>
+
+			<%= f.label :title %>
+			<%= f.text_field :title, class: "form-control" %>
+		  
+			<%= f.label :description %>
+			<%= f.text_field :description, class: "form-control" %>
+		
+			<%= f.label :link %>
+			<%= f.text_field :link, class: "form-control" %>
+			
+			<%= f.label :product_type %>
+			<%= f.text_field :product_type, class: "form-control" %>
+			
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+		 
+		 	<% if current_page?(controller: 'products', action: 'new') %>
+				<%= f.submit  "Create Product", class: "btn btn-primary", data: {disable_with: "Creating..."} %> 
+			<% else current_page?(controller: 'products', action: 'edit') %>
+				<%= f.submit  "Edit Product", class: "btn btn-primary", data: {disable_with: "Updating..."} %>
+			<% end %>
+		  
+		<% end %>
+	</div>
+</div>
+

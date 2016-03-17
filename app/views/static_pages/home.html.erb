@@ -1,0 +1,93 @@
+	
+	<a class = "hero-link" href = "">
+		<div class = "hero">
+			<h1 class = "hero-title">User Interviews</h1>
+			<%= image_tag('whiteupvote.png', class: "hero-upvote" ) %>
+			<p class = "hero-content">Click here to see the latest interviews!</p>
+		</div>
+	</a>
+
+		
+	<div class = "content group">
+	
+		<nav class = "navbar">
+			<div class = "top-nav">
+				<%= link_to "Home", root_path, class: "top-nav-link" %>
+				<li><a class = "top-nav-link" href = "">Collections</a></li>
+				<li><a class = "top-nav-link" href = "">LIVE Chats</a></li>
+			</div>
+			<div class = "bottom-nav">
+				<h1 class = "bottom-nav-title">Categories</h1>
+				<li><a class = "bottom-nav-link" href = "">Tech</a></li>
+				<li><a class = "bottom-nav-link" href = "">Games</a></li>
+				<li><a class = "bottom-nav-link" href = "">Books</a></li>
+				<li><a class = "bottom-nav-link" href = "">Podcasts</a></li>
+			</div>
+		</nav>
+	
+		<div class = "product">
+	
+				<div class = "product-header group">
+					<h2 class = "product-header-title">Today</h2>
+					<div class = "product-nav">
+						<a class = "product-nav-popular" href = "">     Popular</a>
+						<p class = "product-nav-seperator"> | </p>
+						<a class = "product-nav-newest" href = "">		Newest</a>
+					</div>
+				</div>
+				
+				<% @products.each do |product| %>
+				<a href = "">
+					<div class = "product-section group">
+						
+						<%= image_tag(product.image_url, class: "product-sect-img") %>
+						<div class = "product-sect-info">
+							<h3 class = "product-sect-title"><%= product.title %></h3>
+							<p class = "product-sect-descript">
+								<%= product.description %>
+							</p>
+						
+							<div class = "product-options">
+								<button class = "upvote">
+										<p class = "upvotes">88</p>
+								</button>
+								<div class = "comments">
+									<%= image_tag('comments.png', class: "comments-icon" ) %>
+								</div>
+								<div class = "add-collection">
+									<img class = "add-collecton-icon">
+									<span class = "add-collection-save">save</span>
+								</div>
+								<div class = "email">
+									<%= image_tag('email.png', class: "email-icon" ) %>
+								</div>
+								<div class = "type">
+								<%= product.product_type %>
+								</div>
+							</div>
+						</div>
+						
+			
+					</div>
+				</a>
+				
+				<% end %>
+		
+				
+		
+		</div>
+		<div class = "social group">
+			<p class = "social-title">Product Hunt is more fun with friends</p>
+			<p class = "social-descript">Login to see what your friends are upvoting.</p>
+			<a href = "www.twitter.com"><div class = "social-twitter">
+				<%= image_tag('twitter', class: "twitter-icon" ) %>
+				<p class = "social-twitter-words">Log in with Twitter</p>
+			</div></a>
+			<a href = ""><div class = "social-facebook">
+				<%= image_tag('facebook.png', class: "facebook-icon" ) %>
+				<p class = "social-facebook-words">Log in with Facebook</p>
+			</div></a>
+		</div>
+	
+	</div>
+	
