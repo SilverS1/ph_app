@@ -12,29 +12,40 @@
 		
 			<%= link_to image_tag('logo.png', class: "logo" ), root_path %>
 		
-		<form action = "" class = "header-form">
-			<label for "search" ><i class = "search-icon"></i></label>
-			<input class = "search" type = "search" placeholder = "Discover your next favourite thing..." >
-		</form>
-		
+
+			<%= form_tag @product, url: browse_products_path, :method => 'get', class: "search" do %>
+				<p>	
+					<%= text_field_tag :search, params[:search], :style => "width: 275px; height: 25px;", class: "search-text", :placeholder => "Discover your next favourite thing..." %>
+				</p>
+			<% end %>
+	
 		
 		<div class = "header-right" >
+			
 		
-			<div class = "logged-out-dropdown">...
-				<div class = "dropdown-content">
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-					<a href = ""></a>
-				</div>
-			</div>
-						
-			<a href = "" class = "login">Login</a>
+			<% if user_signed_in? %>
+					<a class = "plus">+</a>
+					<a  class = "bell" href = ""></a>
+					<a href = "">
+						<img class = "profile-pic" src = "https://38.media.tumblr.com/avatar_4f673b688d73_128.png" 
+						alt = "Your profile picture">
+					</a>
+			<% else %>	
+					<div class = "logged-out-dropdown">...
+						<div class = "dropdown-content">
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+							<a href = ""></a>
+						</div>
+					</div>
+				<%= link_to "Login", user_session_path, class: "login" %>
+			<% end %>
  			
  			
 		</div>

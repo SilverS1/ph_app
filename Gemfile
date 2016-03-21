@@ -12,6 +12,7 @@ gem 'bcrypt-ruby'
 
 gem 'mysql2', '~> 0.3.18' 
 gem 'devise', '~> 3.4.0' 
+gem 'acts_as_votable', '~> 0.10.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

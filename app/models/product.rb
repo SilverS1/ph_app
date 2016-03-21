@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
 	validates :link, presence: true, length: { maximum: 200 }
 	validates :image, presence: true
 	validates :product_type, presence: true
+	acts_as_votable
 	
 	def self.search_products(search)
   		if search

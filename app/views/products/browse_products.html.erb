@@ -1,17 +1,5 @@
 <h1>Browse</h1>
 
-<div>
-	<%= form_tag @product, :method => 'get', :id => "products_search" do %>
-  		<p>	
-    		<%= text_field_tag :search, params[:search] %>
-    		<%= submit_tag "Search", :name => nil %>
-  		</p>
-  		
-		
-  		
-	<% end %>
-</div>
-
 <% @products.each do |product| %>
 	<%= render product %>
 <% end %>

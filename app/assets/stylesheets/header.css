@@ -24,14 +24,19 @@
 }
 
 .search {
-	background-image: url("../images/logo.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%; 
-	background-position: cover;
 	float: left;
 	margin: 10px 6px;
 	width: 275px;
-	font-size: 100%;
+	font-size: 20px;
+	font-family: Helvetica;
+}
+
+.search-text text_field {
+	font-size: 20px;
+}
+
+.search-button {
+	display: inline;
 }
 
 .header-right {
@@ -70,7 +75,7 @@
 }
 
 .bell {
-	background-image: url("../images/bell.png");
+	background-image: url("bell.png");
 	background-size: 100% 100%;
 	height: 14px;
 	width: 14px;
@@ -79,7 +84,7 @@
 }
 
 .bell:hover {
-	background-image: url("../images/redbell.png");
+	background-image: url("redbell.png");
 	cursor: pointer;
 }
 

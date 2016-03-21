@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 	 root 'static_pages#home'
 	 get 'browse_products' => 'products#browse_products'
 	 
-	 resources :users
-	 resources :products
+	 resources :products do
+	 	member do
+	 		put "upvote" => "products#upvote"
+	 	end
+	 end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

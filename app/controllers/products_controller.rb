@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 	end
 	
 	 def browse_products
-		@products = Product.all.search_products(params[:search]).paginate(:per_page => 12, :page => params[:page])
+	 	@products = Product.all.search_products(params[:search]).paginate(:per_page => 12, :page => params[:page])
 	  end
 	
 	def index
@@ -42,6 +42,13 @@ class ProductsController < ApplicationController
 	
 	def destroy
 	end
+	
+	def upvote
+		@product = Product.find(params[:id])
+		@product.upvote_from current_user
+		redirect_to root_url
+	end
+	
 	
 	def product_params
 		params.require(:product).permit(:title, :description, :link, :product_type, :image)
