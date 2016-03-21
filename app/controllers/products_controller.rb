@@ -15,6 +15,10 @@ class ProductsController < ApplicationController
 		end
 	end
 	
+	 def browse_products
+		@products = Product.all.search_products(params[:search]).paginate(:per_page => 12, :page => params[:page])
+	  end
+	
 	def index
 		@products = Product.all
 	end

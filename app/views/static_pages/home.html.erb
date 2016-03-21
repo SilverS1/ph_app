@@ -36,41 +36,7 @@
 				</div>
 				
 				<% @products.each do |product| %>
-					<%= link_to(product) do %>
-				
-						<div class = "product-section group">
-						
-							<%= image_tag(product.image_url, class: "product-sect-img") %>
-							<div class = "product-sect-info">
-								<h3 class = "product-sect-title"><%= product.title %></h3>
-								<p class = "product-sect-descript">
-									<%= product.description %>
-								</p>
-						
-								<div class = "product-options">
-									<button class = "upvote">
-											<p class = "upvotes">88</p>
-									</button>
-									<div class = "comments">
-										<%= image_tag('comments.png', class: "comments-icon" ) %>
-									</div>
-									<div class = "add-collection">
-										<img class = "add-collecton-icon">
-										<span class = "add-collection-save">save</span>
-									</div>
-									<div class = "email">
-										<%= image_tag('email.png', class: "email-icon" ) %>
-									</div>
-									<div class = "type">
-									<%= product.product_type %>
-									</div>
-								</div>
-							</div>
-						
-			
-						</div>
-				
-					<% end %>
+					<%= render product %>
 				<% end %>			
 		
 		</div>

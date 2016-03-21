@@ -6,5 +6,13 @@ class Product < ActiveRecord::Base
 	validates :image, presence: true
 	validates :product_type, presence: true
 	
+	def self.search_products(search)
+  		if search
+   		 where('title LIKE ? or product_type LIKE ?', "%#{search}%", "%#{search}%")
+  		else
+   		 all
+  		end
+	end
+	
 
 end
