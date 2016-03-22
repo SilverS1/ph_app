@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 	before_action :find_product, only: [:edit, :update, :show, :destroy, :upvote]
-	before_action :authenticate_user!
+	before_action :authenticate_user!, except: [:show]
 
 	def new
 		@product = Product.new

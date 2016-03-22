@@ -141,14 +141,21 @@
 	cursor: pointer;
 }
 
-
-.comments-icon {
+.comments {
 	height: 26px;
 	width: 44px;
 	float: left;
 	margin: 5px;
 	border: 1px solid #f2f2f2;
 }
+
+.comments-size {
+	float: right;
+	color: black;
+	font-size: 13px;
+	margin: 7px 5px 5px 0;
+}
+
 
 .add-collection {
 	visibility: hidden;

@@ -10,6 +10,8 @@ gem 'paperclip'
 gem 'arel'
 gem 'bcrypt-ruby'
 
+gem 'thin'
+
 gem 'mysql2', '~> 0.3.18' 
 gem 'devise', '~> 3.4.0' 
 gem 'acts_as_votable', '~> 0.10.0'
