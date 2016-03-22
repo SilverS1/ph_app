@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   	 devise_for :users
 	 root 'static_pages#home'
 	 get 'browse_products' => 'products#browse_products'
+	 get 'popular' => 'static_pages#popular'
 	 
 	 resources :products do
 	 	member do

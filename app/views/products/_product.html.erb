@@ -9,10 +9,11 @@
 				<%= product.description %>
 			</p>
 	
-			<div class = "product-options">
+			<div class = "product-options group">
 				<div class = "upvote">
+					<%= image_tag('upvote1.png', class: "upvote-img") %>
 							<%= link_to upvote_product_path(product), class: "upvotes", method: :put do %>
-								<button type = "button">
+								<button class = "upvote-button" type = "button">
 									<%= product.get_upvotes.size %>
 								</button>
 							<% end %>

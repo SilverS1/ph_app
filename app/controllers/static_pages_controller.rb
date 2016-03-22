@@ -8,6 +8,10 @@ class StaticPagesController < ApplicationController
 		end
 	end
 	
+	def popular
+		@products = Product.all.order(:cached_votes_up => :desc).paginate(:per_page => 12, :page => params[:page])
+	end
 	
+
 
 end

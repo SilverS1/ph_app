@@ -119,13 +119,26 @@
 	font-size: 13px;
 	float: right;
 }
-/* 
+
+.upvote-button {
+	width: 5px;
+	text-decoration: none;
+	border-style: none;
+	background-color: white;
+	margin-right: 3px;
+}
+
+.upvote-img {
+	height: 13px;
+	width: 10px;
+	margin: 0 0 0 3px;
+}
 
 .upvote:hover {
 	background-color: #f2f2f2;
 	cursor: pointer;
 }
- */
+
 
 .comments-icon {
 	height: 26px;
@@ -150,6 +163,7 @@
 
 .add-collection:hover {
 	background-color: #f2f2f2;
+	cursor: pointer;
 }
 
 .add-collection-save {
@@ -182,6 +196,7 @@
 
 .email:hover {
 	background-color: #f2f2f2;
+	cursor: pointer;
 }
 
 .product-section:hover .email {
@@ -197,4 +212,5 @@
 
 .type:hover {
 	border-bottom: 1px solid #999;
+	cursor: pointer;
 }
