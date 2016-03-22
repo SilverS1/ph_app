@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
 	
 	def upvote
 		@product.upvote_from current_user
-		redirect_to root_url
+		redirect_to request.referrer
 	end
 	
 	def find_product
