@@ -6,6 +6,7 @@ class Product < ActiveRecord::Base
 	validates :image, presence: true
 	validates :product_type, presence: true
 	acts_as_votable
+	has_many :comments
 	
 	def self.search_products(search)
   		if search

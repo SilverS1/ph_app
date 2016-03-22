@@ -4,12 +4,15 @@ Rails.application.routes.draw do
 	 get 'browse_products' => 'products#browse_products'
 	 get 'popular' => 'static_pages#popular'
 	 
+	 
 	 devise_for :users
 	 resources :products do
+	 	resources :comments, only: [:new, :create, :index]
 	 	member do
 	 		put "upvote" => "products#upvote"
 	 	end
 	 end
+	 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
