@@ -10,14 +10,12 @@
 <header class = "header group">
 	
 		
-			<%= link_to image_tag('logo.png', class: "logo" ), root_path %>
-		
+		<%= link_to image_tag('logo.png', class: "logo" ), root_path %>
+	
 
-			<%= form_tag @product, url: browse_products_path, :method => 'get', class: "search" do %>
-				<p>	
-					<%= text_field_tag :search, params[:search], :style => "width: 275px; height: 25px;", class: "search-text", :placeholder => "Discover your next favourite thing..." %>
-				</p>
-			<% end %>
+		<%= form_tag browse_products_path, :method => 'get', class: "search" do %>
+			<%= text_field_tag :search, params[:search], :style => "width: 275px; height: 25px;", class: "search-text", :placeholder => "Discover your next favourite thing..." %>
+		<% end %>
 	
 		
 		<div class = "header-right" >

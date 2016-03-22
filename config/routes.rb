@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  	 devise_for :users
 	 root 'static_pages#home'
 	 get 'browse_products' => 'products#browse_products'
 	 get 'popular' => 'static_pages#popular'
 	 
+	 devise_for :users
 	 resources :products do
 	 	member do
 	 		put "upvote" => "products#upvote"

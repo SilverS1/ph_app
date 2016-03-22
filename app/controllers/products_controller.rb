@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-
+	before_action :find_product, only: [:edit, :update, :show, :destroy, :upvote]
 	before_action :authenticate_user!
 
 	def new
@@ -24,11 +24,9 @@ class ProductsController < ApplicationController
 	end
 	
 	def edit
-		@product = Product.find(params[:id])
 	end
 	
 	def update
-		@product = Product.find(params[:id])
 		if @product.update_attributes(product_params)
 			redirect_to root_url
 		else
@@ -37,16 +35,18 @@ class ProductsController < ApplicationController
 	end
 	
 	def show
-		@product = Product.find(params[:id])
 	end
 	
 	def destroy
 	end
 	
 	def upvote
-		@product = Product.find(params[:id])
 		@product.upvote_from current_user
 		redirect_to root_url
+	end
+	
+	def find_product
+		@product = Product.find(params[:id])
 	end
 	
 	
