@@ -2,6 +2,7 @@
 	<div class = "show-product-info">
 		<%= render @product %>
 	</div>
+	<%= link_to "Delete Product", @product, method: :delete, data: {confirm: "You sure?"} %>
 
 	<div class = "show-comments">
 		<%= link_to "Add Comment", new_product_comment_path(@product) %>

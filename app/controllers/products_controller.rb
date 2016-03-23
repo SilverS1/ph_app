@@ -43,6 +43,12 @@ class ProductsController < ApplicationController
 	end
 	
 	def destroy
+		if @product.user_id != current_user.id 
+			redirect_to @product
+		else
+			@product.destroy
+			redirect_to root_url
+		end
 	end
 	
 	def upvote
