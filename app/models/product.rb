@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
 	validates :product_type, presence: true
 	acts_as_votable
 	has_many :comments
+	belongs_to :user
 	
 	def self.search_products(search)
   		if search

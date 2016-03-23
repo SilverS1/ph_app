@@ -1,9 +1,14 @@
-<p><%= @product.id %></p>
-<p><%= @product.title %></p>
-<p><%= @product.description %></p>
-<p><%= @product.link %></p>
-<p><%= @product.created_at %></p>
-<br>
-<%= render 'comments/comments' %>
+<div class = "show-product">
+	<div class = "show-product-info">
+		<%= render @product %>
+	</div>
 
-<%= @product.comments.size %>
+	<div class = "show-comments">
+		<%= link_to "Add Comment", new_product_comment_path(@product) %>
+		
+		<div class = "show-comments-all">
+			<%= render 'comments/form' %>
+			<%= render 'comments/comments' %>
+		</div>
+	</div>
+</div>

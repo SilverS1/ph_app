@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322182931) do
+ActiveRecord::Schema.define(version: 20160323172824) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160322182931) do
   add_index "products", ["cached_weighted_average"], name: "index_products_on_cached_weighted_average"
   add_index "products", ["cached_weighted_score"], name: "index_products_on_cached_weighted_score"
   add_index "products", ["cached_weighted_total"], name: "index_products_on_cached_weighted_total"
+  add_index "products", ["user_id"], name: "index_products_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 20160322182931) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

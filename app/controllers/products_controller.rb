@@ -3,11 +3,11 @@ class ProductsController < ApplicationController
 	before_action :authenticate_user!, except: [:show]
 
 	def new
-		@product = Product.new
+		@product = current_user.products.new
 	end
 	
 	def create
-		@product = Product.new(product_params)
+		@product = current_user.products.new(product_params)
 		if @product.save
 			redirect_to root_url
 		else
@@ -24,6 +24,9 @@ class ProductsController < ApplicationController
 	end
 	
 	def edit
+		unless @product.user_id == current_user.id 
+			redirect_to root_url
+		end
 	end
 	
 	def update
@@ -36,6 +39,7 @@ class ProductsController < ApplicationController
 	
 	def show
 		@comments = @product.comments
+		@comment = Comment.new
 	end
 	
 	def destroy
@@ -49,6 +53,7 @@ class ProductsController < ApplicationController
 	def find_product
 		@product = Product.find(params[:id])
 	end
+	
 	
 	
 	def product_params
