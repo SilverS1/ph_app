@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 	 get 'browse_products' => 'products#browse_products'
 	 get 'popular' => 'static_pages#popular'
 	 get 'tech' => 'static_pages#tech'
+	 get 'games' => 'static_pages#games'
+	 get 'books' => 'static_pages#books'
+	 get 'podcasts' => 'static_pages#podcasts'
 	 
 	 
 	 devise_for :users

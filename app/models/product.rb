@@ -60,7 +60,7 @@ class Product < ActiveRecord::Base
 	
 	
 	
-	
+# 	TECH = ['WEB', 'WINDOWS']
 	
 	
 	
@@ -88,7 +88,7 @@ class Product < ActiveRecord::Base
 	
 	BOOKS = [['Food','FOOD'],['Music','MUSIC'],['Politics','POLITICS'],['Art','ART'],['Travel','TRAVEL'],
 	['Music','MUSIC'],['Business','BUSINESS'],['Health and Fitness','HEALTH AND FITNESS'],
-	['Social Media','SOCIAL MEDIA'],['Daredevil','DAREDEVIL']]
+	['Social Media','SOCIAL MEDIA'],['Daredevil', 'DAREDEVIL']]
 	
 	PODCASTS = [['Food','FOOD'],['Music','MUSIC'],['Politics','POLITICS'],['Art','ART'],['Travel','TRAVEL'],
 	['Music','MUSIC'],['Business','BUSINESS'],['Health and Fitness','HEALTH AND FITNESS'],

@@ -8,7 +8,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'rmagick' # used for resizing images with carrierwave
 gem 'paperclip'
 gem 'arel'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 gem 'thin' # Fixes some sort of problem I can't remember.
 gem 'ransack'
@@ -17,7 +17,7 @@ gem 'mysql2', '~> 0.3.18'
 gem 'devise', '~> 3.4.0' 
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'rake', '~> 11.1', '>= 11.1.1'
-gem 'mime-types-data','~> 3.2015.1120 '
+gem 'mime-types-data'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
