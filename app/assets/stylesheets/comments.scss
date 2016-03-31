@@ -3,8 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .comments-info {
 	margin: 10px 0;
+	font-size: 13px;
 }
 
-.comments-info-list {
+.comments-info-content {
 	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.comments-info-user {
+	color: black;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.comments-info-timestamp {
+	list-style-type: none;
+	color: blue;
 }

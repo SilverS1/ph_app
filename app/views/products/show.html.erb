@@ -2,7 +2,13 @@
 	<div class = "show-product-info">
 		<%= render @product %>
 	</div>
-	<%= link_to "Delete Product", @product, method: :delete, data: {confirm: "You sure?"} %>
+	
+	<% if user_signed_in? %>
+		<% if owned?(@product) %>
+			<%= link_to "Delete Product", @product, method: :delete, data: {confirm: "You sure?"} %>
+			<%= link_to "Edit Product", edit_product_path(@product) %>
+		<% end %>
+	<% end %>
 
 	<div class = "show-comments">
 		<%= link_to "Add Comment", new_product_comment_path(@product) %>

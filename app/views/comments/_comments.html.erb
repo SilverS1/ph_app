@@ -1,9 +1,8 @@
 <% @comments.each do |comment| %>
 
 	<div class = "comments-info">
-		<li class = "comments-info-list"><%= comment.content %></li>
-		<li class = "comments-info-list">Added by <%= comment.user.username %></li>
-		<li class = "comments-info-list">at <%= comment.created_at %></li>
+		<p class = "comments-info-content"><%= comment.content %></p>
+		<p class = "comments-info-user"><%= comment.user.username %></p>
 	</div>
 
 <% end %>
