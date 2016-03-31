@@ -46,8 +46,17 @@ class ProductsController < ApplicationController
 	end
 	
 	def upvote
-		@product.upvote_from current_user
-		redirect_to request.referrer
+		if current_user.voted_up_on? @product
+			@product.downvote_from current_user
+			redirect_to request.referrer
+		else
+			@product.upvote_from current_user
+			redirect_to request.referrer
+		end
+	end
+	
+	def downvote
+				
 	end
 	
 	def authorised_user
