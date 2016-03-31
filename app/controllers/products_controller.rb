@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
-	before_action :find_product, only: [:edit, :update, :show, :destroy, :upvote]
+	before_action :find_product, only: [:edit, :update, :show, :upvote, :destroy]
 	before_action :authenticate_user!, except: [:show]
+	before_action :authorised_user, only: [:edit, :update, :destroy]
 
 	def new
 		@product = current_user.products.new
@@ -24,9 +25,6 @@ class ProductsController < ApplicationController
 	end
 	
 	def edit
-		unless @product.user_id == current_user.id 
-			redirect_to root_url
-		end
 	end
 	
 	def update
@@ -43,12 +41,8 @@ class ProductsController < ApplicationController
 	end
 	
 	def destroy
-		if @product.user_id != current_user.id 
-			redirect_to @product
-		else
-			@product.destroy
-			redirect_to root_url
-		end
+		@product.destroy
+		redirect_to root_url
 	end
 	
 	def upvote
@@ -56,11 +50,13 @@ class ProductsController < ApplicationController
 		redirect_to request.referrer
 	end
 	
+	def authorised_user
+		redirect_to @product if @product.user_id != current_user.id
+	end
+	
 	def find_product
 		@product = Product.find(params[:id])
 	end
-	
-	
 	
 	def product_params
 		params.require(:product).permit(:title, :description, :link, :product_type, :image)

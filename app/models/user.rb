@@ -6,5 +6,27 @@ class User < ActiveRecord::Base
   acts_as_voter
   has_many :comments
   has_many :products
+  validate :validate_username
+  attr_accessor :login
+  validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
+
+	def validate_username
+	  if User.where(email: username).exists?
+		errors.add(:username, :invalid)
+	  end
+	end
+
+	def self.find_first_by_auth_conditions(warden_conditions)
+		conditions = warden_conditions.dup
+		if login = conditions.delete(:login)
+		  if login.start_with?('+')
+			where(["phone = :value AND phone_confirm = :phone_confirm", { value: login.downcase, phone_confirm: true }]).first
+		  else
+			where(["lower(email) = :value", { value: login.downcase }]).first
+		  end
+		else
+		  where(conditions).first
+		end
+	  end
   
 end

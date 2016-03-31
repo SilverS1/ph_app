@@ -11,10 +11,11 @@
 			<%= f.label :link %>
 			<%= f.text_field :link, class: "form-control" %>
 			
-			<%= f.select :product_type, [['Android','ANDROID'],['Chrome','CHROME'],['Web','WEB'],['Iphone','IPHONE'],['Slack','SLACK'],['Other','Other']] %>
+			<%= f.label :product_type %>
+			<%= f.select :product_type, options_for_select(Product::TYPES), class: "form-control" %>
 			
 			<%= f.label :image %>
-			<%= f.file_field :image %>
+			<%= f.file_field :image, class: "form-control" %>
 		 
 		 	<% if current_page?(controller: 'products', action: 'new') %>
 				<%= f.submit  "Create Product", class: "btn btn-primary", data: {disable_with: "Creating..."} %> 

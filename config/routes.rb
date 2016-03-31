@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	 root 'static_pages#home'
 	 get 'browse_products' => 'products#browse_products'
 	 get 'popular' => 'static_pages#popular'
+	 get 'tech' => 'static_pages#tech'
 	 
 	 
 	 devise_for :users

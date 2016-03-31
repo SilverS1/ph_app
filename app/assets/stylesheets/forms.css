@@ -1,0 +1,107 @@
+.new-product {
+	text-align: center;
+}
+
+.row {
+	margin: 20px 100px;
+}
+
+.form-control {
+	width: 450px;
+	display: block;
+	padding: 5px 5px;
+	font-size: 14px;
+	line-height: 1.5px;
+	color: gray;
+	background-color: #fff;
+	margin: 5px 0;
+}
+
+
+
+/* 
+.form-control {
+  display: block;
+  width: 80%;
+  padding: floor((@grid-gutter-width / 2)) ((@navbar-height - @line-height-computed) / 2);
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: gray;
+  background-color: #fff;
+  background-image: none;
+  border: $input-btn-border-width solid $input-border-color;
+  @include border-radius(@border-radius-base);
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  margin: 60px;
+
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  @include form-control-focus();
+
+  &::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: lightgray;
+    opacity: 1;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+  @include transition(all .2s ease-in-out);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus();
+    }
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+    @include box-shadow(none);
+  }
+}
+
+.btn-primary {
+  @include button-variant(#fff, darken(#428bca, 6.5%), darken(darken(#428bca, 6.5%), 5%));
+}
+
+ */
