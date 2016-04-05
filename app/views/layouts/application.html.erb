@@ -25,7 +25,7 @@
 					<a class = "plus">+</a>
 					<a  class = "bell" href = ""></a>
 					<a href = "">
-						<%= image_tag(current_user.avatar, class: "profile-pic") %>
+						<%= link_to image_tag(current_user.avatar, class: "profile-pic") %>
 					</a>
 			<% else %>	
 					<div class = "logged-out-dropdown">...
