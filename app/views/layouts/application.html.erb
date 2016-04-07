@@ -22,8 +22,7 @@
 			
 		
 			<% if user_signed_in? %>
-					<a class = "plus">+</a>
-					<a  class = "bell" href = ""></a>
+					<%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "logout" %>
 					<a href = "">
 						<%= link_to image_tag(current_user.avatar, class: "profile-pic") %>
 					</a>

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 	before_action :find_product, only: [:edit, :update, :show, :upvote, :destroy]
-	before_action :authenticate_user!, except: [:show]
+	before_action :authenticate_user!, except: [:show, :browse_products, :index]
 	before_action :authorised_user, only: [:edit, :update, :destroy]
 
 	def new
@@ -53,10 +53,6 @@ class ProductsController < ApplicationController
 			@product.upvote_from current_user
 			redirect_to request.referrer
 		end
-	end
-	
-	def downvote
-				
 	end
 	
 	def authorised_user

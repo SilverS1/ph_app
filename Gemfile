@@ -1,21 +1,43 @@
 source 'https://rubygems.org'
 
+#----------------
+# views
+#----------------
+
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
+#----------------
+# databases
+#----------------
+
+gem 'arel'
+gem 'mysql2', '~> 0.3.18' 
+
+#----------------
+# user-interface
+#----------------
+
 gem 'carrierwave', '0.10.0' # used for users to upload things, used in GoodreadsApp
 gem 'mini_magick', '3.8.0' # used for resizing images
-gem 'bootstrap-will_paginate', '0.0.10'
 gem 'rmagick' # used for resizing images with carrierwave
 gem 'paperclip'
-gem 'arel'
 gem 'bcrypt'
-
-gem 'thin' # Fixes some sort of problem I can't remember.
-gem 'ransack'
-
-gem 'mysql2', '~> 0.3.18' 
 gem 'devise', '~> 3.4.0' 
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'ransack'
+
+#----------------
+# other
+#----------------
+
+gem 'thin' # web server
+
+
+
+
+
 gem 'rake', '~> 11.1', '>= 11.1.1'
 gem 'mime-types-data'
 

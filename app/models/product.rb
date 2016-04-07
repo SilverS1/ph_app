@@ -15,34 +15,7 @@ class Product < ActiveRecord::Base
   		else
    		 all
   		end
-	end
-	
-	
-	def self.search_genres(genre)
-		if search
-		where('product_type LIKE ?', "%#{genre}%")
-		else 
-		all
-		end
-	end
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	end	
 	
 	TYPES = [['Android','ANDROID'],['Chrome','CHROME'],['Web','WEB'],['Iphone','IPHONE'],
 	['Slack','SLACK'],['Mac','MAC'],['Food','FOOD'],['Music','MUSIC'],
@@ -51,32 +24,6 @@ class Product < ActiveRecord::Base
 	['Music','MUSIC'],['Business','BUSINESS'],['Indie Games','INDIE GAMES'],['Occulus Rift','OCCULUS RIFT'],
 	['Linux','LINUX'],['Daredevil','DAREDEVIL'],['Developer Tools','DEVELOPER TOOLS'],['Extensions','EXTENSIONS'],
 	['Health and Fitness','HEALTH AND FITNESS'],['Social Media','SOCIAL MEDIA'],['Hobbit','HOBBIT']]
-	
-	
-	
-	
-	
-	
-	
-	
-	
-# 	TECH = ['WEB', 'WINDOWS']
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	TECH = [['Android','ANDROID'],['Chrome','CHROME'],['Web','WEB'],['Iphone','IPHONE'],
 	['Slack','SLACK'],['Mac','MAC'],['Hardware','HARDWARE'],['Virtual Reality','VIRTUAL REALITY'],
@@ -93,15 +40,6 @@ class Product < ActiveRecord::Base
 	PODCASTS = [['Food','FOOD'],['Music','MUSIC'],['Politics','POLITICS'],['Art','ART'],['Travel','TRAVEL'],
 	['Music','MUSIC'],['Business','BUSINESS'],['Health and Fitness','HEALTH AND FITNESS'],
 	['Social Media','SOCIAL MEDIA']]
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 

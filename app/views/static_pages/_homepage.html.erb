@@ -29,12 +29,12 @@
 				<div class = "product-header group">
 					<h2 class = "product-header-title">Today</h2>
 					<div class = "product-nav">
-						<%= link_to "Popular", popular_path, class: "product-nav-popular" %>
+						<%= popular_page_redirector %>
 						<p class = "product-nav-seperator"> | </p>
-						<%= link_to "Newest", root_path, class: "product-nav-newest" %>
+						<%= new_page_redirector %>
 					</div>
 				</div>
-				
+
 				<% @products.each do |product| %>
 					<%= render product %>
 				<% end %>			

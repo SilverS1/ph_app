@@ -43,6 +43,20 @@
 	width: 129px;
 }
 
+.logout {
+	float: left;
+	text-transform: uppercase;
+	color: #999;
+	margin: 16px 20px 10px 0;
+	font-size: 11px;
+	font-weight: bold;	
+	letter-spacing: .5px;
+}
+
+.logout:hover {
+	color: #de5338;
+}
+
 .logged-in-dropdown {
 	float: left;
 	line-height: 2.3em;

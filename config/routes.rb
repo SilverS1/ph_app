@@ -3,10 +3,14 @@ Rails.application.routes.draw do
 	 root 'static_pages#home'
 	 get 'browse_products' => 'products#browse_products'
 	 get 'popular' => 'static_pages#popular'
-	 get 'tech' => 'static_pages#tech'
-	 get 'games' => 'static_pages#games'
-	 get 'books' => 'static_pages#books'
-	 get 'podcasts' => 'static_pages#podcasts'
+	 get 'tech' => 'categories#tech'
+	 get 'games' => 'categories#games'
+	 get 'books' => 'categories#books'
+	 get 'podcasts' => 'categories#podcasts'
+	 get 'tech/popular' => 'categories#popular_tech'
+	 get 'games/popular' => 'categories#popular_games'
+	 get 'books/popular' => 'categories#popular_books'
+	 get 'podcasts/popular' => 'categories#popular_podcasts'
 	 
 	 
 	 devise_for :users

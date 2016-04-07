@@ -11,8 +11,8 @@
 			<%= f.label :link %>
 			<%= f.text_field :link, class: "form-control" %>
 			
-			<%= f.label :product_type %>
-			<%= f.select :product_type, options_for_select(Product::TYPES, @product.product_type), class: "form-control" %>
+			<%= f.label :product_type, class: "form-product-type" %>
+			<%= f.select :product_type, options_for_select(Product::TYPES, @product.product_type) %>
 			
 			<%= f.label :image %>
 			<%= f.file_field :image, class: "form-control" %>
